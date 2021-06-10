@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html land=en>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PAINT</title>
+        <link rel="stylesheet" type="text/css" href="index.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.min.css"/>
+        <link href="data:image/x-icon;base64,AAABAAEAEBAAAAAAAABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAEYHRALcT8gBOsPUAsBySAMVe6wA4pvUAL6L1AK7HDADeascA3vJaADP6GQDP6xoA21HAACuc7QCmEtsABG66AEi4OQDx9S8AwXHeAM/bgQAalOsA1ofGAIeHhwAIXpwAYdtRAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgYAAAAAAAAAAAAAAAAAAAYGAAQEBAQEBAQEAAAAAAAGBgQAQEBFRUVAQEQAAAAABgYAQABFQYGDhUBGRAAAAAYGAAAABUGBgYOGQsQAAAAGBgAAAABFQQDGQsLERAAABgYAQABBgQNAwMGEQEQAAAYGAEVFQkJDQ0DBhUBEAAAGBgQAQ4GFhYDAwMVARAAABcXABAOBgYDAwMTAgUQAAAHBwAQDg4GAwMPDwUCEAAHBwcHEBUKFAgDAwMCExAABwcSEhABCAwIBgYGFRAAAAASEgAAEAEIAxUVFRAAAAAAABIAAAAQEBAQEBAAAAAAAAAAAAAAAAAAAAAAAAAAAJ//AACQDwAAgAcAAIgDAACcAwAAnAEAAIgBAACAAQAAgAEAAJABAACQAQAAAAEAAAADAACYBwAA3A8AAP//AAA=" rel="icon" type="image/x-icon" />
+    </head>
+    <body>
+        <!-- <div id="menu-bar">
+            <button id="file">FILE</button>
+            <button id="home">HOME</button>
+            <button id="view">VIEW</button>
+        </div> -->
+        <div id="tool-bar">
+            <!-- ame of active tool -->
+            <div id="active-tool">
+                <span id="tool-name" title="Active-tool">BRUSH</span>
+            </div>
+            <!-- brush tool -->
+            <div class="tool">
+                <i class="fas fa-paint-brush" id="brush" title="Brush"></i>
+                <input  class="jscolor" title="Brush color" id="brush-color" value="783478">
+                <span id="brush-size" title="Brush size">10</span>
+                <input type="range" id="size-ranger" value="10" min="1" max="50">
+            </div>
+            <!-- canvas color -->
+            <div class="tool">
+                <i class="fas fa-fill-drip" title="Background color" id="bucket"></i>
+                <input  class="jscolor" id="bucket-color"  title="Canvas-color" value="FFFFFF">                
+            </div>
+            <!-- Eraser tool -->
+            <div class="tool">
+                <i class="fas fa-eraser" title="Eraser" id="eraser"></i>
+            </div>
+            <!-- refresh -->
+            <div class="tool">
+                <i class="fas fa-sync-alt" id="refresh" title="Refresh canvas"></i>
+            </div>
+            <div class="tool">
+                <i class="fas fa-undo" id="undo" title="undo"></i>
+            </div>
+            <div class="tool">
+                <i class="fas fa-redo" id="redo" title="redo"></i>
+            </div>
+        </div>    
+        <div id="file-bar">   
+            <!-- save in cloud storage -->
+            <div class="tool">
+                <i class="fas fa-cloud-upload-alt" id="upload" title="Upload in local storage"></i>
+            </div>
+            <!-- load from local storage -->
+            <div class="tool">
+                <i class="fas fa-cloud-download-alt" id="download" title="Download from local storage"></i>
+            </div>
+            <!-- empty local storage -->
+            <div class="tool">
+                <i class="fas fa-trash" id="delete" title="Empty Local storage"></i>
+            </div>
+            <!-- download -->
+            <div class="tool">
+                <a id="downloadInComputer">
+                    <i class="fas fa-file-download" id="save" title="Save"></i>
+                </a>
+            </div>
+        </div>    
+        </div>
+        <div id="menu-bar">
+            <button id="file">FILE</button>
+            <button id="home">HOME</button>
+            <button id="view">VIEW</button>
+        </div>
+        <div id="view-bar">
+            <!-- zoom in -->
+            <div class="tool">
+                <i class="fas fa-search-plus" id="zoom-in" title="zoom-in"></i>
+            </div>   
+            <!-- zoom out -->
+            <div class="tool">
+                <i class="fas fa-search-minus" id="zoom-out" title="zoom-out"></i>
+            </div>
+        </div>
+        <!-- script -->
+        <script src="jscolor.js"></script>
+        <script src="index.js"></script>
+    </body>
+</html>
